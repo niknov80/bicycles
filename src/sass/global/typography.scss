@@ -1,0 +1,75 @@
+@mixin text-opensans-46-64-700 {
+  font-family: $ff-opensans;
+  font-size: 46px;
+  line-height: 64px;
+  font-weight: 700;
+  letter-spacing: -0.23px;
+}
+
+@mixin text-opensans-30-42-700 {
+  font-family: $ff-opensans;
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: 700;
+  letter-spacing: -0.15px;
+}
+
+@mixin text-opensans-20-32-300 {
+  font-family: $ff-opensans;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 300;
+  letter-spacing: -0.1px;
+}
+
+@mixin text-opensans-20-28-400 {
+  font-family: $ff-opensans;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+@mixin text-opensans-18-32-300 {
+  font-family: $ff-opensans;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 300;
+  letter-spacing: -0.09px;
+}
+
+@mixin text-opensans-18-28-600 {
+  font-family: $ff-opensans;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.09px;
+}
+
+@mixin text-opensans-17-28-600 {
+  font-family: $ff-opensans;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.085px;
+}
+
+@mixin text-opensans-16-32-300 {
+  font-family: $ff-opensans;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+@mixin text-opensans-15-24-400 {
+  font-family: $ff-opensans;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin text-opensans-15-21-600 {
+  font-family: $ff-opensans;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 600;
+}
