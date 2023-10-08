@@ -1,31 +1,31 @@
 include ../../mixins/image.pug
 
-mixin card(cardData)
+mixin card(cardData, genConfig)
 
   .card&attributes(attributes)
     h3=cardData.cardTitle
     +image({
-      devMode: cardData.image.devMode,
-      mediaTablet: cardData.image.mediaTablet,
-      mediaDesktop: cardData.image.mediaDesktop,
+      devMode: genConfig.devMode,
+      mediaTablet: genConfig.mediaQueries.tablet,
+      mediaDesktop: genConfig.mediaQueries.desktop,
       alt: cardData.image.alt,
-      mobileWidth: cardData.image.mobileWidth,
-      mobileHeight: cardData.image.mobileHeight,
-      mobileSrc: cardData.image.mobileSrc,
-      mobileSrc2x: cardData.image.mobileSrc2x,
-      mobileSrcWebp: cardData.image.mobileSrcWebp,
-      mobileSrc2xWebp: cardData.image.mobileSrc2xWebp,
-      tabletWidth: cardData.image.tabletWidth,
-      tabletHeight: cardData.image.tabletHeight,
-      tabletSrc: cardData.image.tabletSrc,
-      tabletSrc2x: cardData.image.tabletSrc2x,
-      tabletSrcWebp: cardData.image.tabletSrcWebp,
-      tabletSrc2xWebp: cardData.image.tabletSrc2xWebp,
-      desktopWidth: cardData.image.desktopWidth,
-      desktopHeight: cardData.image.desktopHeight,
-      desktopSrc: cardData.image.desktopSrc,
-      desktopSrc2x: cardData.image.desktopSrc2x,
-      desktopSrcWebp: cardData.image.desktopSrcWebp,
-      desktopSrc2xWebp: cardData.image.desktopSrc2xWebp,
+      mobileWidth: cardData.image.mobile.width,
+      mobileHeight: cardData.image.mobile.height,
+      mobileSrc: cardData.image.mobile.src,
+      mobileSrc2x: cardData.image.mobile.src2x,
+      mobileSrcWebp: cardData.image.mobile.srcWebp,
+      mobileSrc2xWebp: cardData.image.mobile.src2xWebp,
+      tabletWidth: cardData.image.tablet.width,
+      tabletHeight: cardData.image.tablet.height,
+      tabletSrc: cardData.image.tablet.src,
+      tabletSrc2x: cardData.image.tablet.src2x,
+      tabletSrcWebp: cardData.image.tablet.srcWebp,
+      tabletSrc2xWebp: cardData.image.tablet.src2xWebp,
+      desktopWidth: cardData.image.desktop.width,
+      desktopHeight: cardData.image.desktop.height,
+      desktopSrc: cardData.image.desktop.src,
+      desktopSrc2x: cardData.image.desktop.src2x,
+      desktopSrcWebp: cardData.image.desktop.srcWebp,
+      desktopSrc2xWebp: cardData.image.desktop.src2xWebp,
     })
 
