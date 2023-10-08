@@ -1,0 +1,16 @@
+mixin image(imageData)
+  - const srcset = imageData.mobileSrc2x + " 2x"
+  - const srcsetTablet = imageData.tabletSrc + ", " + imageData.tabletSrc2x + " 2x"
+  - const srcsetDesktop = imageData.desktopSrc + ", " + imageData.desktopSrc2x + " 2x"
+  - const srcsetMobileWebp = imageData.mobileSrcWebp + ", " + imageData.mobileSrc2xWebp + " 2x"
+  - const srcsetTabletWebp = imageData.tabletSrcWebp + ", " + imageData.tabletSrc2xWebp + " 2x"
+  - const srcsetDesktopWebp = imageData.desktopSrcWebp + ", " + imageData.desktopSrc2xWebp + " 2x"
+
+  picture
+    if !imageData.devMode
+      source(media=imageData.mediaDesktop, srcset=srcsetDesktopWebp, type="image/webp")
+      source(media=imageData.mediaTablet, srcset=srcsetTabletWebp, type="image/webp")
+      source(srcset=srcsetMobileWebp, type="image/webp")
+    source(media=imageData.mediaDesktop, srcset=srcsetDesktop)
+    source(media=imageData.mediaTablet, srcset=srcsetTablet)
+    img(width=imageData.widthMobile, height=imageData.heightMobile, src=imageData.mobileSrc, srcset=srcset, alt=devMode)

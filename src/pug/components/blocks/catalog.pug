@@ -1,0 +1,37 @@
+include ../../config-data.pug
+include card/card-data.pug
+include card/card.pug
+
+
+section.catalog
+  .container
+    .catlog__wrapper
+      h2 Виды велосипедов
+      each card in card_data
+        +card({
+          cardTitle: `${card.cardTitle}`,
+          image: {
+            devMode: genConfig.devMode,
+            mediaTablet: `${genConfig.mediaQueries.tablet}`,
+            mediaDesktop: `${genConfig.mediaQueries.desktop}`,
+            alt: `${card.image.alt}`,
+            mobileWidth: `${card.image.mobile.width}`,
+            mobileHeight: `${card.image.mobile.height}`,
+            mobileSrc: `${card.image.mobile.src}`,
+            mobileSrc2x: `${card.image.mobile.src2x}`,
+            mobileSrcWebp: `${card.image.mobile.srcWebp}`,
+            mobileSrc2xWebp: `${card.image.mobile.src2xWebp}`,
+            tabletWidth: `${card.image.tablet.width}`,
+            tabletHeight: `${card.image.tablet.height}`,
+            tabletSrc: `${card.image.tablet.src}`,
+            tabletSrc2x: `${card.image.tablet.src2x}`,
+            tabletSrcWebp: `${card.image.tablet.srcWebp}`,
+            tabletSrc2xWebp: `${card.image.tablet.src2xWebp}`,
+            desktopWidth: `${card.image.desktop.width}`,
+            desktopHeight: `${card.image.desktop.height}`,
+            desktopSrc: `${card.image.desktop.src}`,
+            desktopSrc2x: `${card.image.desktop.src2x}`,
+            desktopSrcWebp: `${card.image.desktop.srcWebp}`,
+            desktopSrc2xWebp: `${card.image.desktop.src2xWebp}`,
+          }
+        })
