@@ -1,0 +1,111 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+
+  &:first-of-type::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 45%;
+    left: -18%;
+    width: 180px;
+    height: 180px;
+    border: 27px solid $color-icon-base;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    @include vp-1439 {
+      width: 127px;
+      height: 127px;
+      border-width: 18px;
+      top: unset;
+      bottom: -10%;
+      left: -13%
+    }
+
+    @include vp-767 {
+      bottom: -11%;
+      left: -9%;
+    }
+  }
+
+  &:nth-of-type(2n)::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 3%;
+    left: 1%;
+    width: 47px;
+    height: 47px;
+    border: 8px solid $color-icon-base;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    @include vp-1439 {
+      display: none;
+    }
+  }
+
+  &:nth-of-type(2n)::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 1%;
+    right: 0;
+    width: 47px;
+    height: 47px;
+    border: 8px solid $color-icon-base;
+    transform: translate(50%, -50%);
+    z-index: 5;
+
+    @include vp-1439 {
+      display: none;
+    }
+  }
+
+  &:nth-of-type(3n)::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 15px;
+    right: 10px;
+    width: 95px;
+    height: 95px;
+    border: 17px solid $color-icon-base;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    z-index: 5;
+
+    @include vp-1439 {
+      width: 68px;
+      height: 68px;
+      border-width: 13px;
+    }
+
+    @include vp-767 {
+      top: 15px;
+      right: 20px;
+    }
+  }
+}
+
+.card h3 {
+  @include text-opensans-22-34-600;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.card img {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+
+  @include vp-1439 {
+    aspect-ratio: 0.9;
+  }
+}

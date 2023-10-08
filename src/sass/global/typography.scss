@@ -38,6 +38,14 @@
   letter-spacing: -0.12px;
 }
 
+@mixin text-opensans-22-34-600 {
+  font-family: $ff-opensans;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
 @mixin text-opensans-22-34-400 {
   font-family: $ff-opensans;
   font-size: 22px;

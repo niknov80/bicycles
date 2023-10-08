@@ -1,11 +1,10 @@
-include ../../config-data.pug
 include card/card-data.pug
 include card/card.pug
 
 
 section.catalog
   .container
-    .catlog__wrapper
-      h2 Виды велосипедов
+    h2 Виды велосипедов
+    .catalog__wrapper
       each card in card_data
-        +card(card, genConfig)
+        +card(card, genConfig)(class="catalog__card")
