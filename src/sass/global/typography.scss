@@ -86,12 +86,27 @@
   letter-spacing: -0.09px;
 }
 
+@mixin text-opensans-18-30-600 {
+  font-family: $ff-opensans;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: -0.09px;
+}
+
 @mixin text-opensans-18-28-600 {
   font-family: $ff-opensans;
   font-size: 18px;
   line-height: 28px;
   font-weight: 600;
   letter-spacing: -0.09px;
+}
+
+@mixin text-opensans-17-31-400 {
+  font-family: $ff-opensans;
+  font-size: 17px;
+  line-height: 31px;
+  font-weight: 400;
 }
 
 @mixin text-opensans-17-28-600 {
@@ -115,6 +130,13 @@
   line-height: 28px;
   font-weight: 300;
   letter-spacing: -0.08px;
+}
+
+@mixin text-opensans-16-22-400 {
+  font-family: $ff-opensans;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
 }
 
 @mixin text-opensans-15-24-400 {
