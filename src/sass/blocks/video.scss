@@ -1,0 +1,43 @@
+.video {
+  padding-top: 125px;
+  background: linear-gradient(180deg, $color-bg-dark 0%, $color-bg-dark 85%, $color-bg-primary 85%, $color-bg-primary 100%);
+}
+
+.video__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.video__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+}
+
+.video__promo {
+  width: 100%;
+  aspect-ratio: 1.78;
+}
+
+.video__description h2 {
+  @include title-2;
+
+  color: $color-text-white;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.video__description p {
+  @include text-opensans-16-28-300;
+
+  color: $color-text-white-70;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}

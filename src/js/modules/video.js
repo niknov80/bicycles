@@ -1,5 +1,5 @@
 export const findVideos = () => {
-  let videos = document.querySelectorAll('.video');
+  let videos = document.querySelectorAll('.promo-video');
 
   for (let i = 0; i < videos.length; i++) {
     setupVideo(videos[i]);
@@ -10,7 +10,7 @@ const setupVideo = (video) => {
   let link = video.querySelector('a');
   let button = video.querySelector('button');
   let mediaUrl = link.href;
-  let wrap = video.querySelector('.video__wrapper');
+  let wrap = video.querySelector('.promo-video__wrapper');
 
   button.addEventListener('click', () => {
     let iframe = createIframe(mediaUrl);

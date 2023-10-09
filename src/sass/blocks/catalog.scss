@@ -1,6 +1,6 @@
 .catalog {
   padding-top: 180px;
-  padding-bottom: 240px;
+  padding-bottom: 235px;
   position: relative;
 
   @include vp-1439 {
@@ -51,6 +51,7 @@
 
 .catalog__card {
   flex-grow: 1;
+  max-width: 50%;
 
   @include vp-1439 {
     max-width: 39%;
