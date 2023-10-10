@@ -88,7 +88,6 @@
 }
 
 .hero__form form {
-
   @include vp-1439 {
     max-width: 325px;
     margin-left: auto;
@@ -121,7 +120,7 @@
   }
 }
 
-.form__input {
+.hero__input {
   padding-bottom: 20px;
 }
 

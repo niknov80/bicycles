@@ -181,8 +181,7 @@
   }
 }
 
-
-.no-js  {
+.no-js {
   & .site-nav {
     position: relative;
     flex-direction: column;
@@ -194,14 +193,13 @@
   & .site-nav__logo {
     position: relative;
     top: 0;
-
   }
 
   & .site-nav__toggle {
     display: none;
   }
 
-  &  .site-nav__list {
+  & .site-nav__list {
     width: 100%;
     height: unset;
     z-index: 0;

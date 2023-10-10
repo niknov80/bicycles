@@ -1,30 +1,27 @@
 header.header.no-js
-    nav.site-nav
-      button.js-toggle.site-nav__toggle(type="button", area-label="Открыть меню")
-      a.site-nav__logo(href="index.html")
-        img(width="68", height="21", src="img/logo.svg", alt="Логотип")
-      ul.js-menu.site-nav__list
-        li.site-nav__item
-          a.site-nav__link(href="#about") О нас
-            span.site-nav__arrow.
-              <svg width="25" height="25">
-                <use xlink:href="img/sprite.svg#arrow"></use>
-              </svg>
-        li.site-nav__item
-          a.site-nav__link(href="#types") Виды велосипедов
-            span.site-nav__arrow.
-              <svg width="25" height="25">
-                <use xlink:href="img/sprite.svg#arrow"></use>
-              </svg>
-        li.site-nav__item
-          a.site-nav__link(href="#video") Видео про велосипеды
-            span.site-nav__arrow.
-              <svg width="25" height="25">
-                <use xlink:href="img/sprite.svg#arrow"></use>
-              </svg>
-        li.site-nav__item
-          a.site-nav__link(href="#contacts") Контакты
-            span.site-nav__arrow.
-              <svg width="25" height="25">
-                <use xlink:href="img/sprite.svg#arrow"></use>
-              </svg>
+  nav.site-nav
+    button.js-toggle.site-nav__toggle(type="button")
+      span.visually-hidden Открыть
+    a.site-nav__logo(href="index.html")
+      img(width="68", height="21", src="img/logo.svg", alt="Логотип")
+    ul.js-menu.site-nav__list
+      li.site-nav__item
+        a.site-nav__link(href="#about") О нас
+          span.site-nav__arrow
+            svg(width="25" height="25")
+              use(xlink:href="img/sprite.svg#arrow")
+      li.site-nav__item
+        a.site-nav__link(href="#types") Виды велосипедов
+          span.site-nav__arrow
+            svg(width="25" height="25")
+              use(xlink:href="img/sprite.svg#arrow")
+      li.site-nav__item
+        a.site-nav__link(href="#video") Видео про велосипеды
+          span.site-nav__arrow
+            svg(width="25" height="25")
+              use(xlink:href="img/sprite.svg#arrow")
+      li.site-nav__item
+        a.site-nav__link(href="#contacts") Контакты
+          span.site-nav__arrow
+            svg(width="25" height="25")
+              use(xlink:href="img/sprite.svg#arrow")

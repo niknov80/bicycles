@@ -11,10 +11,12 @@ section.hero
         +input({
           inputPlaceholder: "Введите ваше имя",
           inputName: "name",
-        })(class="form__input", data-validate-type="text", data-limitation="name", data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-required)
+          inputAreaLabel: "Введите ваше имя"
+        })(class="hero__input", data-validate-type="text", data-limitation="name", data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-required)
         +input({
           inputType: "tel",
           inputPlaceholder: "Введите ваш номер телефон",
+          inputAreaLabel: "Введите ваш номер телефон",
           inputName: "phone"
-        })(class="form__input", data-validate-type="phone", data-on-input-validate, data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-message-success="Поле заполнено верно", data-required)
+        })(class="hero__input", data-validate-type="phone", data-on-input-validate, data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-message-success="Поле заполнено верно", data-required)
         button.hero__btn.btn.btn--form(type="submit") Подобрать велосипед мечты
