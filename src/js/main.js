@@ -1,8 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {findVideos} from './modules/video';
 import {Form} from './modules/form-validate/form.js';
-import {CustomSelect} from "./modules/select/custom-select.js";
-import {detectedScript, toggleClickHandler} from "./modules/menu.js";
+import {CustomSelect} from './modules/select/custom-select.js';
+import {detectedScript, toggleClickHandler} from './modules/menu.js';
 
 // ---------------------------------
 

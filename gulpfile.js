@@ -25,6 +25,7 @@ import { otfToTtf, ttfToWoff, copyWoff } from './gulp/tasks/fonts.js';
 import { compileMainMinScripts, compileMainScripts, compileVendorScripts } from './gulp/tasks/scripts.js';
 import { validateMarkup } from "./gulp/tasks/w3c.js";
 import { lintBem } from "./gulp/tasks/bem.js";
+import {favicon} from "./gulp/tasks/favicon.js";
 
 // Наблюдатель за изменениями в файлах
 function Watcher() {
@@ -42,7 +43,7 @@ const validateW3C = validateMarkup;
 const lintingBem = lintBem;
 
 const dev = gulp.series(clean, copyWoff, pug, copyImage, svg, sprite, styles, compileMainScripts, compileVendorScripts, gulp.parallel(Watcher, server));
-const preview = gulp.series(clean, copyWoff, pug, images, svg, sprite, styles, compileMainMinScripts, compileVendorScripts, server);
-const build = gulp.series(clean, copyWoff, pug, images, svg, sprite, styles, compileMainMinScripts, compileVendorScripts);
+const preview = gulp.series(clean, copyWoff, pug, images, svg, sprite, favicon, styles, compileMainMinScripts, compileVendorScripts, server);
+const build = gulp.series(clean, copyWoff, pug, images, svg, sprite, favicon, styles, compileMainMinScripts, compileVendorScripts);
 
 export { dev, preview, build, convertOtfToTtf, convertTtwToWoff, validateW3C, lintingBem }
