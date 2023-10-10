@@ -6,6 +6,7 @@ import { path } from './gulp/config/path.js';
 
 // Импорт плагинов
 import { plugins } from './gulp/config/plugins.js';
+import ghPages from 'gh-pages'
 
 // Передаем значения в глобальную переменную
 global.app = {
@@ -37,6 +38,9 @@ function Watcher() {
   gulp.watch(path.watch.js, gulp.series(compileMainScripts, compileVendorScripts)).on('change', app.plugins.browsersync.reload);
 }
 
+const deploy = (cb) => {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
 const convertTtwToWoff = ttfToWoff;
 const convertOtfToTtf = otfToTtf;
 const validateW3C = validateMarkup;
@@ -46,4 +50,4 @@ const dev = gulp.series(clean, copyWoff, pug, copyImage, svg, sprite, styles, co
 const preview = gulp.series(clean, copyWoff, pug, images, svg, sprite, favicon, styles, compileMainMinScripts, compileVendorScripts, server);
 const build = gulp.series(clean, copyWoff, pug, images, svg, sprite, favicon, styles, compileMainMinScripts, compileVendorScripts);
 
-export { dev, preview, build, convertOtfToTtf, convertTtwToWoff, validateW3C, lintingBem }
+export { dev, preview, build, deploy, convertOtfToTtf, convertTtwToWoff, validateW3C, lintingBem }
