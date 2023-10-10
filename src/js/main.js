@@ -1,7 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {findVideos} from './modules/video';
 import {Form} from './modules/form-validate/form.js';
-import {sliderInit} from './modules/slider.js';
 import {CustomSelect} from "./modules/select/custom-select.js";
 import {detectedScript, toggleClickHandler} from "./modules/menu.js";
 
@@ -16,7 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   findVideos();
-  sliderInit();
   detectedScript();
   toggleClickHandler();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
