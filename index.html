@@ -37,7 +37,7 @@
             </a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="#types">Виды велосипедов<span class="site-nav__arrow">
+            <a class="site-nav__link" href="#catalog">Виды велосипедов<span class="site-nav__arrow">
                 <svg width="25" height="25">
                   <use xlink:href="img/sprite.svg#arrow"></use>
                 </svg>
@@ -67,12 +67,14 @@
       <section class="hero">
         <div class="hero__wrapper">
           <div class="hero__description">
-            <h1>Мы продаем велосипеды</h1>
-            <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+            <div class="hero__text">
+              <h1>Мы&nbsp;продаем велосипеды</h1>
+              <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+            </div>
           </div>
           <div class="hero__form" data-form-validate data-callback="base">
             <form method="post" action="https://echo.htmlacademy.ru/courses">
-              <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+              <p>Заполните поля ниже и&nbsp;мы подберем велосипед Вашей мечты</p>
               <div class="input hero__input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
                 <label>
                   <input type="text" name="name" placeholder="Введите ваше имя" aria-label="Введите ваше имя">
@@ -88,20 +90,20 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__wrapper">
-            <h2>Несколько фактов о нас</h2>
+            <h2>Несколько фактов о&nbsp;нас</h2>
             <ol>
               <li>Самый широкий выбор велосипедов!</li>
-              <li>Доставка велосипедов по всей России!</li>
+              <li>Доставка велосипедов по&nbsp;всей России!</li>
               <li>Большой выбор крутых аксессуаров!</li>
               <li>Профессиональные консультации!</li>
             </ol>
           </div>
         </div>
       </section>
-      <section class="catalog">
+      <section class="catalog" id="catalog">
         <div class="container">
           <h2>Виды велосипедов</h2>
           <div class="catalog__wrapper">
@@ -141,11 +143,11 @@
           </div>
         </div>
       </section>
-      <section class="video">
+      <section class="video" id="video">
         <div class="video__wrapper">
           <div class="video__description">
             <h2>Видео про велосипеды</h2>
-            <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+            <p>В&nbsp;этом видео мы&nbsp;подробно расскажем про особенности выбора велосипеда для себя.</p>
           </div>
           <div class="promo-video video__promo">
             <div class="promo-video__wrapper">
@@ -164,11 +166,11 @@
           </div>
         </div>
       </section>
-      <section class="find-us">
+      <section class="find-us" id="contacts">
         <div class="find-us__wrapper">
           <div class="find-us__header">
             <h2>Как нас найти?</h2>
-            <p>Мы находимся по адресу:<cite>Санкт-Петербург, ул. Большая Конюшенная, д. 19</cite>
+            <p>Мы&nbsp;находимся по&nbsp;адресу:<cite> Санкт-Петербург, ул. Большая Конюшенная, д.&nbsp;19</cite>
             </p>
           </div>
           <div class="find-us__map map">
@@ -178,18 +180,20 @@
       </section>
     </main>
     <footer class="footer">
-      <a href="mailto:puteshestviemechta@gmail.ru">
-        <svg width="26" height="20" viewBox="0 0 26 20" xmlns="http://www.w3.org/2000/svg" aria-label="Адрес">
-          <use href="img/sprite.svg#email"></use>
-        </svg>
-        <span>puteshestviemechta@gmail.ru</span>
-      </a>
-      <a href="tel:+749978468446">
-        <svg width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" aria-label="Адрес">
-          <use href="img/sprite.svg#phone"></use>
-        </svg>
-        <span>+7 (499) -784-684-46</span>
-      </a>
+      <div class="footer__contacts">
+        <a href="mailto:puteshestviemechta@gmail.ru">
+          <svg width="26" height="20" viewBox="0 0 26 20" xmlns="http://www.w3.org/2000/svg" aria-label="Адрес">
+            <use href="img/sprite.svg#email"></use>
+          </svg>
+          <span>puteshestviemechta@gmail.ru</span>
+        </a>
+        <a href="tel:+749978468446">
+          <svg width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg" aria-label="Адрес">
+            <use href="img/sprite.svg#phone"></use>
+          </svg>
+          <span>+7 (499) -784-684-46</span>
+        </a>
+      </div>
     </footer>
   </div>
   <script src="js/vendor.min.js"></script>
