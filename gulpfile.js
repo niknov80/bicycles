@@ -39,7 +39,7 @@ function Watcher() {
 }
 
 const deploy = (cb) => {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
+  ghPages.publish('./build', cb);
 }
 const convertTtwToWoff = ttfToWoff;
 const convertOtfToTtf = otfToTtf;
@@ -47,7 +47,7 @@ const validateW3C = validateMarkup;
 const lintingBem = lintBem;
 
 const dev = gulp.series(clean, copyWoff, pug, copyImage, svg, sprite, styles, compileMainScripts, compileVendorScripts, gulp.parallel(Watcher, server));
-const preview = gulp.series(clean, copyWoff, pug, images, svg, sprite, favicon, styles, compileMainMinScripts, compileVendorScripts, server);
+const preview = gulp.series(clean, copyWoff, pug, images, svg, sprite, favicon, styles, compileMainMinScripts, compileVendorScripts, gulp.parallel(Watcher, server));
 const build = gulp.series(clean, copyWoff, pug, images, svg, sprite, favicon, styles, compileMainMinScripts, compileVendorScripts);
 
 export { dev, preview, build, deploy, convertOtfToTtf, convertTtwToWoff, validateW3C, lintingBem }

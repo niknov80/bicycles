@@ -2,10 +2,6 @@
   padding-top: 40px;
   padding-bottom: 100px;
 
-  display: flex;
-  justify-content: center;
-  gap: 90px;
-
   @include vp-1439 {
     padding-top: 20px;
     padding-bottom: 55px;
@@ -17,6 +13,23 @@
     padding-top: 35px;
     padding-bottom: 50px;
     gap: 20px;
+  }
+}
+
+.footer__contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  max-width: 565px;
+  column-gap: 90px;
+  row-gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 }
 

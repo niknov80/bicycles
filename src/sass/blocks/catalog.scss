@@ -1,6 +1,6 @@
 .catalog {
   padding-top: 180px;
-  padding-bottom: 235px;
+  padding-bottom: 145px;
   position: relative;
 
   @include vp-1439 {
@@ -31,17 +31,22 @@
 }
 
 .catalog__wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 60px;
+  align-items: start;
   padding-left: 20px;
   padding-right: 20px;
 
   @include vp-1439 {
+    display: flex;
     align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
     padding-left: 0;
     padding-right: 0;
+    row-gap: 50px;
   }
 
   @include vp-767 {
@@ -54,23 +59,29 @@
 }
 
 .catalog__card {
-  flex-grow: 1;
-  max-width: 50%;
+  width: 100%;
 
   @include vp-1439 {
-    max-width: 39%;
+    width: 39%;
   }
 
   @include vp-767 {
     width: 100%;
-    max-width: 100%;
   }
 
-  &:nth-of-type(2n) {
-    margin-bottom: -8%;
+  &:nth-of-type(3n+1) {
+    margin-top: 1%;
 
     @include vp-1439 {
-      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  &:nth-of-type(3n+2) {
+    margin-top: 10%;
+
+    @include vp-1439 {
+      margin-top: 0;
     }
   }
 }

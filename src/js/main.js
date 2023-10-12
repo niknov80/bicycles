@@ -3,6 +3,7 @@ import {findVideos} from './modules/video';
 import {Form} from './modules/form-validate/form.js';
 import {CustomSelect} from './modules/select/custom-select.js';
 import {detectedScript, toggleClickHandler} from './modules/menu.js';
+import {isWebP} from './utils/webp.js';
 
 // ---------------------------------
 
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  isWebP();
   // Modules
   // ---------------------------------
   findVideos();

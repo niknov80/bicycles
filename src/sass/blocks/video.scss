@@ -1,6 +1,6 @@
 .video {
   padding-top: 125px;
-  background: linear-gradient(180deg, $color-bg-dark 0%, $color-bg-dark 87%, $color-bg-primary 87%, $color-bg-primary 100%);
+  background: linear-gradient(180deg, $color-bg-dark 0%, $color-bg-dark 88%, $color-bg-primary 88%, $color-bg-primary 100%);
 
   @include vp-1439 {
     padding-top: 60px;
@@ -20,6 +20,9 @@
   gap: 60px;
   padding-left: 255px;
   padding-right: 255px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 
   @include vp-1439 {
     padding-left: 130px;

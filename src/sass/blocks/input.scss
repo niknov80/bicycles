@@ -17,6 +17,7 @@
       @include text-opensans-15-24-400;
 
       padding-left: 25px;
+      padding-right: 25px;
       color: $color-text-input;
 
       flex-grow: 1;
@@ -45,6 +46,10 @@
 
       &:focus {
         border: 2px solid rgba(#000000, 0.8);
+      }
+
+      &:hover:disabled {
+        border: 2px solid rgba(0, 0, 0, 0.2);
       }
     }
   }
